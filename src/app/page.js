@@ -30,7 +30,7 @@ export default function Home() {
             onClick={toggleLightMode}
             className="px-4 py-2 rounded-md bg-gray-700 light:bg-gray-200 text-white light:text-black transition-colors duration-300"
           >
-            {isLightMode ? '🌙 ダークモード' : '🌞 ライトモード'}
+            {isLightMode ? '🌙 ダssークモード' : '🌞 ライトモード'}
           </button>
         </div>
         <p className="text-gray-300 light:text-gray-600 max-w-2xl">
