@@ -17,7 +17,7 @@ export default function Home() {
             />
             <div>
               <h1 className="text-3xl">
-                Teppei Sano<span className="wave">👋</span>
+                Teppei Sano
               </h1>
               <p className="light:text-gray-600 mt-2">
                 フロントエンドエンジニア
@@ -26,16 +26,16 @@ export default function Home() {
           </div>
         </div>
         <p className="light:text-gray-600 max-w-2xl">
-          Teppei Sanoのportfolioです。フロントエンドエンジニアとして活動しています。
+          Teppei Sanoのportfolioです。<br></br>AMBL株式会社でフロントエンドエンジニアとして業務しています。
         </p>
       </section>
 
       <section className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {[...Array(6)].map((_, i) => (
+        {[...Array(6)].map((index, i) => (
           <Link key={i} href="#" className="block aspect-square overflow-hidden rounded-lg">
             <Image
               src="/placeholder.svg?height=400&width=400"
-              alt={`作品 ${i + 1}`}
+              alt={`実績 ${i + 1}`}
               width={400}
               height={400}
               className="object-cover w-full h-full transition-transform hover:scale-105"

@@ -1,33 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Blog() {
-  const posts = [
-    {
-      title: "PythonのAPIテスト自動化の基礎とOpenAI APIへ繋がリクエストテスト実装例",
-      category: "Python",
-      date: "2023-11-26",
-      image: "/image/blog-1.jpg"
-    },
-    {
-      title: "行動モデルに沿った意志がない暗い空港の作り方",
-      category: "デザイン",
-      date: "2023-11-25",
-      image: "/image/blog-2.jpg"
-    },
-    {
-      title: "Pythonのパッケージングと配布の全体像",
-      category: "Python",
-      date: "2023-11-24",
-      image: "/image/blog-3.jpg"
-    },
-  ]
+// JSONファイルをインポート
+import postsData from '../../data/posts.json'
 
+export default function Blog() {
   return (
     <div className="space-y-8">
       <h1 className="text-3xl">ブログ</h1>
       <div className="space-y-4">
-        {posts.map((post, i) => (
+        {postsData.map((post, i) => (
           <Link key={i} href="#" className="block bg-gray-200 dark:bg-gray-800 rounded-lg p-4 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-300">
             <div className="flex items-center space-x-4">
               <Image
@@ -51,4 +33,3 @@ export default function Blog() {
     </div>
   )
 }
-
