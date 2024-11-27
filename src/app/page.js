@@ -9,7 +9,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-4">
           <Image
-              src="/image/profile-photo.png"
+              src="/image/top/profile-photo.png"
               alt="Teppei Sano"
               width={100}
               height={100}
