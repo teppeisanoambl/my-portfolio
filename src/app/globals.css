@@ -3,18 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
+  --text-rgb: 255, 255, 255;
   --background-rgb: 0, 0, 0;
 }
 
 .light {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+    --text-rgb: 0, 0, 0;
+    --background-rgb: 255, 255, 255;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--text-rgb));
   background-color: rgb(var(--background-rgb));
+}
+
+body p {
+  color: rgb(var(--text-rgb));
 }
 
 .wave {

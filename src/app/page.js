@@ -1,42 +1,32 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
-  const [isLightMode, setIsLightMode] = useState(false)
-
-  useEffect(() => {
-    if (isLightMode) {
-      document.documentElement.classList.add('light')
-    } else {
-      document.documentElement.classList.remove('light')
-    }
-  }, [isLightMode])
-
-  const toggleLightMode = () => {
-    setIsLightMode(!isLightMode)
-  }
 
   return (
     <div className="space-y-12">
       <section className="space-y-4">
-        <div className="flex justify-between items-center">
-          <h1 className="text-3xl">
-            こんにちは、Kokoroです <span className="wave">👋</span>
-          </h1>
-          <button
-            onClick={toggleLightMode}
-            className="px-4 py-2 rounded-md bg-gray-700 light:bg-gray-200 text-white light:text-black transition-colors duration-300"
-          >
-            {isLightMode ? '🌙 ダssークモード' : '🌞 ライトモード'}
-          </button>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-4">
+          <Image
+              src="/image/profile-photo.png"
+              alt="Teppei Sano"
+              width={100}
+              height={100}
+              className="rounded-full"
+            />
+            <div>
+              <h1 className="text-3xl">
+                Teppei Sano<span className="wave">👋</span>
+              </h1>
+              <p className="light:text-gray-600 mt-2">
+                フロントエンドエンジニア
+              </p>
+            </div>
+          </div>
         </div>
-        <p className="text-gray-300 light:text-gray-600 max-w-2xl">
-          いろはにほへとちりぬるを わかよたれそつねならむ うゐのおくやまけふこえて あさきゆめみしゑひもせす
-          この文は、日本語の全ての音を含んでおり、フォントやレイアウトのテストに最適です。ウェブデザインの世界では、
-          最終的なコンテンツが準備される前に、テキストがデザイン内でどのように収まるかを視覚化するためにプレースホルダーを使用することがよくあります。
+        <p className="light:text-gray-600 max-w-2xl">
+          Teppei Sanoのportfolioです。フロントエンドエンジニアとして活動しています。
         </p>
       </section>
 
